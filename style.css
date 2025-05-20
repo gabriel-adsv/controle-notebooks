@@ -1,0 +1,145 @@
+
+:root {
+  --bg: #f9fafb;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --title: #111827;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --card-bg: #1f2937;
+  --text: #f3f4f6;
+  --border: #374151;
+  --accent: #3b82f6;
+  --danger: #f87171;
+  --title: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}    
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+}    
+
+h1 {
+  text-align: center;
+  color: var(--title);
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}    
+
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}    
+
+.group {
+  background-color: var(--card-bg);
+  padding: 24px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border: 1px solid var(--border);
+}    
+
+h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--title);
+}    
+
+.input-row,
+.search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 160px;
+  background: var(--bg);
+  color: var(--text);
+  transition: border 0.2s ease-in-out;
+} 
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+.delete-btn {
+  background-color: var(--danger);
+  padding: 6px 12px;
+}    
+
+.delete-btn:hover {
+  background-color: #991b1b;
+}    
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}    
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-align: center;
+}    
+
+th {
+  background-color: var(--bg);
+  font-weight: 600;
+  font-size: 14px;
+}    
+
+@media (max-width: 768px) {
+  th, td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  input {
+    min-width: 120px;
+  }
+}    
